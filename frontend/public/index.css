@@ -1,0 +1,73 @@
+body {
+   margin: 0;
+
+   .container {
+      display: grid;
+
+      .topBar {
+         color: white;
+         background-color: rgb(37, 37, 63);
+      }
+      .bottomBar {
+         color: white;
+         background: rgb(73, 73, 90);
+      }
+
+      .content {
+         background-color: rgb(176, 40, 40);
+         display: grid;
+         grid-template-columns: 20px, 50px 20px;
+
+         .banner {
+            display: grid;
+
+            .left img {
+               max-width: 40px;
+               position: absolute;
+               z-index: 1;
+               margin-top: 90px;
+               margin-left: 18px;
+            }
+
+            .img img {
+               width: 100%;
+               position: relative;
+            }
+
+            .right img {
+               max-width: 40px;
+               rotate: 180deg;
+               position: absolute;
+               z-index: 1;
+               margin-top: -419px;
+               margin-left: 1200px;
+            }
+         }
+      }
+
+      .nav {
+         color: white;
+         background-color: rgb(73, 73, 90);
+      }
+      
+      .services {
+         color: white;
+         background-color: rgb(37, 37, 63);
+      }
+
+      .languages {
+         color: white;
+         background-color: rgb(37, 37, 63);
+      }
+
+      .footer {
+         color: white;
+         background-color: rgb(26, 26, 40);
+      }
+
+      .policy {
+         color: white;
+         background-color: rgb(26, 26, 40);
+      }
+   }
+}
