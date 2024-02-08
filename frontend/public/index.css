@@ -7,6 +7,65 @@ body {
       .topBar {
          color: white;
          background-color: rgb(37, 37, 63);
+         display: flex;
+         max-width: 100%;
+
+         .home {
+
+            img {
+               max-width: 100px;
+            }
+         }
+
+         .location {
+
+            img {
+               width: 30px;
+               height: 25px;
+            }
+         }
+
+         .search {
+            display: flex;
+
+            .all {
+
+               img {
+                  max-width: 20px;
+                  
+               }
+            }
+            input {
+               max-height: 30px;
+            }
+            .search {
+               
+               img {
+                  width: 25px;
+                  height: 25px;
+               }
+            }
+         }
+
+         .language {
+
+            img {
+               width: 20px
+            }
+         }
+
+         .acc {
+
+            img {
+               width: 20px;
+            }
+         }
+         .cart {
+
+            img {
+               width: 40px;
+            }
+         }
       }
       .bottomBar {
          color: white;
