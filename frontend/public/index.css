@@ -1,5 +1,7 @@
 body {
    margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
 
    .container {
       display: grid;
@@ -8,47 +10,110 @@ body {
          color: white;
          background-color: rgb(37, 37, 63);
          display: flex;
-         max-width: 100%;
+         align-items: center;
+         height: 60px;
+         width: 1263px;
 
          .home {
-
+            height: 52px;
+            border: 1px solid white;
+            border-radius: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2px;
             img {
-               max-width: 100px;
+               max-width: 96px;
+               max-height: 56px;
+               padding: 2px 6px;
+               
             }
          }
 
          .location {
+            height: 52px;
+            border: 1px solid white;
+            border-radius: 2px;
+            display: flex;
+            width: 140px;
+            align-items: center;
+            margin-left: 1px;
 
-            img {
+            .person span {
+               margin-left: 0px;
+            }
+
+            .person .customer {
+               font-size: 12px;
+               font-family: Arial, Helvetica, sans-serif;
+               white-space: nowrap;
+            }
+
+            .person .pin {
+               font-size: 14px;
+               font-family: Arial, Helvetica, sans-serif;
+               white-space: nowrap;
+            }
+
+            .img img {
                width: 30px;
                height: 25px;
+               padding-left: 0px;
+               padding-top: 18px;
+               
             }
          }
 
          .search {
             display: flex;
+            min-width: 200px;
+            max-width: 300px;
+            padding-left: 6px;
 
-            .all {
-
-               img {
-                  max-width: 20px;
-                  
+            .searchBar {
+               height: 40px;
+               display: flex;
+               .all {
+                  background-color: white;
+                  height: 40px;
+                  width: 50px;
+                  display: flex;
+                  border-top-left-radius: 4px;
+                  border-bottom-left-radius: 4px;
+                  span {
+                     font-size: 12px;
+                     font-family: inherit;
+                     color: rgb(143, 135, 135);
+                     padding-left: 12px;
+                     padding-top: 12px;
+                     
+                  }
+   
+                  img {
+                     width: 12px;
+                     height: 12px;
+                     padding-top: 15px;
+                     padding-left: 7px;
+                     padding-right: 7px;
+                  }
                }
-            }
-            input {
-               max-height: 30px;
-            }
-            .search {
-               
-               img {
-                  width: 25px;
-                  height: 25px;
+               input {
+                  height: 34px;
+               }
+               input:focus {
+                  outline: none;
+               }
+               .search {
+                  
+                  img {
+                     width: 25px;
+                     height: 25px;
+                  }
                }
             }
          }
-
          .language {
-
+   
             img {
                width: 20px
             }
@@ -66,10 +131,13 @@ body {
                width: 40px;
             }
          }
+            
       }
       .bottomBar {
          color: white;
          background: rgb(73, 73, 90);
+         height: 40px;
+         width: 1263px;
       }
 
       .content {
