@@ -5,6 +5,7 @@ body {
 
    .container {
       display: grid;
+      flex-shrink: 1;
 
       .topBar {
          color: white;
@@ -66,12 +67,17 @@ body {
          }
 
          .search {
+            flex-grow: 1;
+            flex-basis: auto;
             display: flex;
-            min-width: 200px;
-            max-width: 300px;
+            min-width: 400px;
+            max-width: 650px;
             padding-left: 6px;
+            padding-right: 6px;
+            border: 1px solid white;
 
             .searchBar {
+               flex-grow: 1;
                height: 40px;
                display: flex;
                .all {
@@ -102,6 +108,8 @@ body {
                   height: 38px;
                   min-width: 280px;
                   border: none;
+                  display: flex;
+                  flex-grow: 1;
                }
                input:focus {
                   outline: none;
@@ -124,26 +132,101 @@ body {
             }
          }
          .language {
-            height: 40px;
-            width: 50px;
-            margin-left: ;
-            
+            height: 52px;
+            width: 70px;
+            margin-left: 0px;
+            border: 1px solid white;
+            display: flex;
+            align-items: center;
+            padding-top: px;
    
-            img {
-               width: 20px
+            .flag {
+               width: 20px;
+               margin-left: 10px;
+               margin-top: 0px;
+            }
+            .dropdown {
+               width: 16px;
+               margin-left: 0px;
             }
          }
 
          .acc {
+            height: 52px;
+            width: 120px;
+            border: 1px solid white;
+            margin-left: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+
+            .span1 {
+               align-self: end;
+               font-family: inherit;
+               font-size: 13px;
+               margin-left: 4px;
+            }
+            .span2 {
+               align-self: start;
+               font-family: inherit;
+               font-size: 14px;
+               margin-left: 4px;
+            }
 
             img {
-               width: 20px;
+               width: 16px;
+               height: 16px;
             }
          }
+
+         .history {
+            height: 52px;
+            width: 70px;
+            border: 1px solid white;
+            margin-left: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .span1 { 
+               align-self: end;
+               font-family: inherit;
+               font-size: 13px;
+               
+
+            }
+            .span2 {
+               align-self: start;
+               font-family: inherit;
+               font-size: 14px;
+               
+            }
+         }
+
          .cart {
+            height: 52px;
+            width: 60px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            
+            
+            span{
+               font-weight: bold;
+               font-family: inherit;
+               font-size: 25px;
+               position: absolute;
+               z-index: 1;
+               margin-top: 6px;
+               margin-left: 4px;
+            }
 
             img {
-               width: 40px;
+               width: 50px;
+               height: 40px;
+               align-self: center;
+               position: relative;
             }
          }
             
