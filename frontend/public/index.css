@@ -23,9 +23,11 @@ body {
             align-items: center;
             margin-left: 2px;
             img {
-               max-width: 96px;
-               max-height: 56px;
+               width: 110px;
+               height: 40px;
                padding: 2px 6px;
+               object-fit: cover;
+               overflow: hidden;
             }
          }
          .home:hover {
@@ -58,11 +60,11 @@ body {
             }
 
             .img img {
-               width: 30px;
-               height: 25px;
+               width: 38px;
+               height: 34px;
                padding-left: 0px;
-               padding-top: 18px;
-               
+               padding-top: 12px;
+               margin-right: -8px;
             }
          }
          .location:hover{
@@ -85,34 +87,28 @@ body {
                display: flex;
                
                .all {
-                  background-color: #ccc;
-                  height: 35px;
-                  align-self: center;
+                  
+                  height: 43px;
                   width: 50px;
                   display: flex;
-                  border-top-left-radius: 4px;
-                  border-bottom-left-radius: 4px;
                   margin-right: -52px;
+                  align-self: center;
+                  padding-right: 0;
+                  align-items: center;
                   z-index: 1;
-                  border: 1px solid red;
-                  padding-bottom: 8px;
-                  border: none;
+                  background-color: rgb(224, 219, 219);
                   
-                  span {
-                     font-size: 12px;
-                     font-family: inherit;
-                     color: rgb(143, 135, 135);
-                     padding-left: 12px;
-                     padding-top: 12px;
+                  .select{
+                     display: flex;
+                     width: 100%;
+                     border: none;
+                     background-color: rgb(224, 219, 219);
                      
-                  }
-   
-                  img {
-                     width: 12px;
-                     height: 12px;
-                     padding-top: 15px;
-                     padding-left: 7px;
-                     padding-right: 7px;
+                     .option {
+                        font-size: 10px;
+                        text-align: center;
+                        
+                     }
                   }
                }
                input {
@@ -145,7 +141,7 @@ body {
                   align-self: center;
                   z-index: 1;
                   padding: 2px 2px;
-                  margin-left: -51px;
+                  margin-left: -50px;
                   overflow: hidden;
                   
                   img {
@@ -248,16 +244,18 @@ body {
             span{
                font-weight: bold;
                font-family: inherit;
-               font-size: 25px;
+               font-size: 20px;
+               color: rgb(244, 135, 26);
                position: absolute;
                z-index: 1;
-               margin-top: 6px;
-               margin-left: 4px;
+               margin-top: 4px;
+               margin-left: 0px;
             }
 
             img {
-               width: 50px;
-               height: 40px;
+               margin-top: 6px;
+               width: 100px;
+               height: 70px;
                align-self: center;
                position: relative;
             }
@@ -286,9 +284,10 @@ body {
             }
 
             img{
-               width: 30px;
-               padding-left: 4px;
-               margin-right: -8px;
+               width: 36px;
+               margin-left: -1px;
+               margin-right: -3px;
+               margin-bottom: 7px;
             }
          }
          div:hover {
@@ -354,11 +353,9 @@ body {
             justify-content: space-between;
 
             div{
-               
                width: 290px;
                height: 420px;
                background-color: white;
-               
                
                img{
                   width: 86%;
@@ -378,7 +375,7 @@ body {
                a {
                   font-size: 12px;
                   margin: 0px 20px;
-                  height: 10%;
+                  text-decoration: none;
                }
             }
          }
@@ -387,8 +384,78 @@ body {
             margin: 20px 20px;
             justify-content: space-between;
             
-            div{
+            .mainDiv{
                width: 290px;
+               height: 420px;
+               background: white;
+               
+               h1{
+                  margin-top: 10px;
+                  margin-left: 20px;
+               }
+               a{
+                  font-size: 12px;
+                  margin: 0px 20px;
+                  text-align: end;
+                  text-decoration: none;
+               }
+               .top{
+                  height: 120px;
+                  display: flex;
+                  justify-content: space-between;
+                  margin: 20px 20px;
+                  div{
+                     width: 120px;
+                     height: 120px;
+                     
+                     img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                     }
+                  }
+               }
+               .bottom{
+                  height: 120px;
+                  display: flex;
+                  justify-content: space-between;
+                  margin: 40px 20px;
+                  margin-bottom: 40px;
+                  div{
+                     width: 120px;
+                     height: 120px;
+                     
+                     img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                     }
+                  }
+               }
+            }
+         }
+         .movie {
+            height: 250px;
+            margin: 20px 20px;
+            background: white;
+            h1{
+               margin: 10px 20px;
+            }
+            .slide{
+               display: flex;
+               justify-content: space-between;
+               margin: 10px 20px;
+
+               div{
+                  height: 180px;
+                  width: 150px;
+
+                  img{
+                     height: 100%;
+                     width: 100%;
+                     object-fit: cover;
+                  }
+               }
             }
          }
       }
