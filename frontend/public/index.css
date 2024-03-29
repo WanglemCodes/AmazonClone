@@ -479,6 +479,7 @@ body {
                justify-content: space-between;
                margin: 0px 20px;
                margin-top: 0px;
+               
 
                div{
                   height: 180px;
@@ -881,7 +882,7 @@ body {
       }
 
       .footer {
-         height: 350px;
+         min-height: 350px;
          color: white;
          background-color: rgb(36, 36, 41);
          display: flex;
@@ -893,11 +894,28 @@ body {
             tr{
                display: flex;
                justify-content: center;
-               background: red;
+               background: inherit;
                td{
                   width: 100px;
-                  height: 100px;
-                  background: red;
+                  background: inherit;
+                  border: none;
+                  margin: 10px 25px;
+
+                  a{
+                     color: rgb(237, 225, 225);
+                     font-size: 14px;
+                     
+                     span{
+                        color: rgb(168, 156, 156);
+                        font-size: 12px;
+                     }
+                  }
+                  a:hover{
+                     text-decoration: underline 0.5px rgb(240, 234, 234);
+                     span{
+                        text-decoration: underline rgb(168, 156, 156);
+                     }
+                  }
                }
             }
          }
@@ -905,7 +923,28 @@ body {
 
       .policy {
          color: white;
-         background-color: rgb(26, 26, 40);
+         height: 80px;
+         width: 100%;
+         background-color: rgb(36, 36, 41);
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         .regulation{
+            color: rgb(234, 226, 226);
+            display: flex;
+            span{
+               padding: 6px 10px;
+            }
+            span:hover{
+               text-decoration: underline 0.5px white;
+            }
+         }
+         
+         .copyright{
+            color: rgb(234, 226, 226);
+         }
       }
    }
 }
