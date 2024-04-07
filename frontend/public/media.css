@@ -1,0 +1,98 @@
+@media only screen and (max-width: 600px){
+   
+   body{
+      margin: 0;
+      grid-template-columns: 393px;
+      
+      
+      .topBar{
+         display: flex;
+         flex-direction: column;
+         /*max-width: 768px;*/
+         max-height: 104px;
+         justify-content: start;
+         align-items: start;
+         overflow: hidden;
+         
+         
+         .left{
+            display: flex;
+            justify-content: space-between;
+            margin: 4px 2px;
+            min-width: 300px;
+            
+         }
+         .mid{
+            min-width: 380px;
+            margin-bottom: 4px;
+            
+         }
+         .right{
+            
+            .cart{
+               margin-bottom:199px;
+               margin-left: 40px;
+            }
+         }
+      }
+      .bottomBar{
+         overflow-x: auto;
+         display: flex;
+         min-height: 40px;
+         
+      }
+      .bottomBar::-webkit-scrollbar{
+         width: 0;
+         height: 0;
+      }
+   }
+   .footerBtn{}
+   .footerServices{
+      overflow-x: auto;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      
+      .services{
+         width: 180px;
+         margin: 10px 4px;
+      }
+   }
+   .footerServices::-webkit-scrollbar{
+      width: 0;
+      height: 0;
+   }
+   .footerPreferences{
+      display: flex;
+      
+      .logo{
+         width: 0;
+      }
+   }
+   .footerTable{
+      overflow: hidden;
+      display: flex;
+      overflow-x: auto;
+      width: 100%;
+      
+      tr{
+         td{
+            margin: 8px 10px;
+         }
+      }
+   }
+   .footerTable::-webkit-scrollbar{
+      width: 0;
+   }
+
+   .footerInfo{
+      height: 100px;
+      padding-bottom: 10px;
+
+      .regulation{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         margin-bottom: 8px;
+      }
+   }
+}
