@@ -95,4 +95,22 @@
          margin-bottom: 8px;
       }
    }
+   .home{
+      max-width: 397px;
+      .banner{
+   
+         .right{
+            left: 330px;
+         }
+      }
+      .products{
+         grid-template-columns: 1fr;
+         margin: auto;
+
+         div{
+            width: 350px;
+            margin: 10px 0px;
+         }
+      }
+   }
 }

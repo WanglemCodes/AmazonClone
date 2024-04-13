@@ -19,6 +19,7 @@ body{
    /*width: 1270px;*/
    box-sizing: border-box;
    font-family: Arial, Helvetica, sans-serif;
+   background: #eae2e2;
 }
 .topBar{
    display: flex;
@@ -557,34 +558,146 @@ body{
       }
    }
 }
-.banner{
+.home{
    display: grid;
    width: 100%;
    height: 100%;
 
-   .left{
-      width: 20px;
-      height: 30px;
-      margin: 80px 30px;
-      position: absolute;
-      background-color: inherit;
-      background-image: url('./src/images/ama.png');
-      background-position-x: 210px;
-      background-position-y: 190px;
-      background-size: 380px;
-      border: none;
-   }
-   .left:hover{
-      border: 1px solid red;
-   }
-   
-   .img{
+   .banner{
+      display: grid;
       width: 100%;
+      height: 100%;
+   
+      .left{
+         width: 60px;
+         height: 120px;
+         margin: 30px 0px;
+         position: absolute;
+         background-color: inherit;
+         background-image: url('./src/images/left.png');
+         background-position-x: 0px;
+         background-position-y: 30px;
+         background-size: 100%;
+         background-repeat: no-repeat;
+         left: 3px;
+         border: none;
+      }
+      .left:focus{
+         border: 1px solid rgb(183, 165, 165);
+         box-shadow: 0 0 0 2px rgb(239, 230, 230), 0 0 10px rgb(202, 188, 188);
+      }
+      
+      .img{
+         width: 100%;
+      }
+      .right{
+         width: 60px;
+         height: 120px;
+         margin: 30px 0px;
+         transform: rotate(180deg);
+         position: absolute;
+         background-color: inherit;
+         background-image: url('./src/images/left.png');
+         background-position-x: 0px;
+         background-position-y: 30px;
+         background-size: 100%;
+         background-repeat: no-repeat;
+         border: none;
+         right: 2px;
+      }
+      .right:focus{
+         border: 1px solid rgb(183, 165, 165);
+         box-shadow: 0 0 0 2px rgb(239, 230, 230), 0 0 10px rgb(202, 188, 188);
+      }
    }
-   .right{
-      width: 20px;
-      height: 30px;
-      position: absolute;
-      right: 0;
+   .products{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-top: -200px;
+      margin-left: 10px;
+      margin-right: 10px;
+   
+      div{
+         display: flex;
+         flex-direction: column;
+         width: 260px;
+         background: rgb(255, 255, 255);
+         margin: auto;
+   
+         h1{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 25px;
+         }
+         img{
+            width: 80%;
+            margin: auto;
+         }
+         p{
+            font-size: 12px;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 25px;
+         }
+      }
+   }
+   .feature{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin: auto;
+
+      div{
+         background: #ffffff;
+         width: 280px;
+         height: 350px;
+         margin: 20px 10px;
+
+         h2{
+            font-size: 16px;
+            margin: 0;
+            margin-left: 10px;
+            margin-bottom: 0px;
+         }
+
+         .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0;
+            max-width: 100%;
+
+            .item{
+               display: flex;
+               width: 120px;
+               background: #ffffff;
+               height: 120px;
+               margin-bottom: 0;
+   
+               img{
+                  width: 100%;
+                  object-fit: cover;
+               }
+            }
+            .name{
+               font-size: 14px;
+               margin: 0;
+               margin-left: 10px;
+               width: 120px;
+               overflow: hidden;
+            }
+         }
+         
+      }
+/*
+      .container{
+         width: 250px;
+         background: #987e7e;
+        
+         
+         .item{
+            width: 100px;
+            background: #822e2e;
+         }
+      }*/
    }
 }

@@ -1,3 +1,9 @@
+let contents = document.querySelector('.content');
+
+const img = btoa()
+
+
+/*
 let movie = document.querySelector('.container .content .movie .slider .slide');
 let container = document.querySelector('.container .content .movie .slider');
 
