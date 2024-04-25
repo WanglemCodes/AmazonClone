@@ -3,15 +3,15 @@
 let navbar = `
 <div class="topBar">
    <div class="left">
-      <div class="logo"></div>
-      <div class="location">
+      <a class="logo"></a>
+      <a class="location">
          <div class="img"></div>
          <div class="address">
             <span class="customer">Deliver to kumar</span>
             <br>
             <span class="pincode">Pin code</span>
          </div>
-      </div>
+      </a>
    </div>
    <div class="mid">  
       <div class="all">
@@ -24,52 +24,51 @@ let navbar = `
       </div> 
    </div>
    <div class="right">
-      <div class="language">
+      <a class="language">
          <span class="flag"></span>
          <span class="lang">EN</span>
          <span class="drop"></span>
-      </div>
-      <div class="acc">
+      </a>
+      <a class="acc">
          <span class="span1">Hello,Awang</span>
          <span class="span2">Account & Lists
             <span class="drop"></span>
          </span>
-      </div>
-      <div class="history">
+      </a>
+      <a class="history">
          <span class="span1">Returns</span>
          <span class="span2">& Orders</span>
-      </div>
-      <div class="cart">
+      </a>
+      <a href="./cart.html" class="cart">
          <span class="count">0</span>
-         <a href="./cart.html" class="cartIcon">
-         </a>
+         <span class="cartIcon">
+         </span>
          <span class="cartText">Cart</span>
-      </div>
+      </a>
    </div>
 </div>
 <div class="bottomBar">
-   <div>
-      <a href=""></a>
+   <a>
+      <span class="hamburger"></span>
       <span>All</span>
-   </div>
-   <div>
+   </a>
+   <a>
       <span>Today's Deals</span>
-   </div>
-   <div>
+   </a>
+   <a>
       <span>Customer Service</span>
-   </div>
-   <div>
+   </a>
+   <a>
       <span>Registry</span>
-   </div>
-   <div>
+   </a>
+   <a>
       <span>Gift Cards</span>
-   </div>
-   <div>
+   </a>
+   <a>
       <span>Sell</span>
-   </div>
+   </a>
 </div>
 `;
 document.querySelector('.navbar').innerHTML = navbar;
 
-let cart = document.querySelector('.cart');
-
+//let cart = document.querySelector('.cart');

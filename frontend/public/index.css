@@ -275,6 +275,7 @@ body{
          min-width: 75px;
          color: white;
          align-items: center;
+         text-decoration: none;
 
          .count{
             position: absolute;
@@ -298,6 +299,7 @@ body{
             margin-top: 0px;
          }
          .cartText{
+            
             font-size: 14px;
             font-weight: bold;
             margin-top: 10px;
@@ -314,7 +316,7 @@ body{
    padding-left: 10px;
    cursor: pointer;
 
-   div {
+   a {
       display: flex;
       height: 36px;
       justify-content: center;
@@ -323,9 +325,9 @@ body{
          padding: 0px 8px;
          white-space: nowrap;
       }
-      a{
+      .hamburger {
          height: 20px;
-         width: 20px;
+         width: 8px;
          background-image: url('./src/images/ama.png');
          background-position-x: 155px;
          background-position-y: 142px;
@@ -334,7 +336,7 @@ body{
          margin-left: 4px;
       }
    }
-   div:hover {
+   a:hover {
       border: 1px solid rgb(255, 255, 255);
       border-radius: 2px;
    }

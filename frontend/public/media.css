@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px){
    
    body{
+      
       margin: 0;
       grid-template-columns: 393px;
       
@@ -96,9 +97,10 @@
       }
    }
    .home{
-      max-width: 397px;
+      grid-template-columns: 393px;
+
       .banner{
-   
+         display: grid;
          .right{
             left: 330px;
          }
@@ -111,6 +113,9 @@
             width: 350px;
             margin: 10px 0px;
          }
+      }
+      .feature{
+         grid-template-columns: 1fr;
       }
    }
 }

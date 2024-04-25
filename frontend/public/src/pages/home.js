@@ -83,7 +83,7 @@ featureProducts.forEach((products, index) => {
 //console.log(products)
    products.forEach((product) => {
       item += `
-            <a>
+            <a href="./item.html">
                <div class="item">
                   <img src="${product.image}" />
                </div>
