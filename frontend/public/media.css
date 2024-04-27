@@ -117,5 +117,15 @@
       .feature{
          grid-template-columns: 1fr;
       }
+      .slides{
+         overflow-x: scroll;
+
+         .leftBtn{
+            width: 0;
+         }
+         .rightBtn{
+            width: 0;
+         }
+      }
    }
 }

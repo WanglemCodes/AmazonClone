@@ -1,4 +1,9 @@
 
+const itemPage = `
+<div class="item"></div>
+`;
+
+document.querySelector('.itemPage').innerHTML = itemPage;
 
 let item = `
 <div class="product">
@@ -35,4 +40,4 @@ let item = `
 </div>
 `;
 
-document.querySelector('.itemPage').innerHTML = item;
+document.querySelector('.item').innerHTML = item;

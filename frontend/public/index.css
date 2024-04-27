@@ -9,6 +9,23 @@ html::-webkit-scrollbar-thumb{
 html::-webkit-scrollbar-track{
    background-color: green;
 }*/
+::-webkit-scrollbar {
+   width: 4px; /* Set the width of the scrollbar */
+   height: 3vh;
+   overflow: hidden;
+ }
+ ::-webkit-scrollbar-thumb {
+   background-color: #9ea1a4ea; /* Set the color of the scrollbar thumb */
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background-color: #cfcccc; /* Set the color of the scrollbar track */
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+   background-color: #a9b0b5; /* Set the color when hovering over the thumb */
+   overflow-x: hidden;
+ }
 
 body{
    display: grid;
@@ -611,95 +628,5 @@ body{
          border: 1px solid rgb(183, 165, 165);
          box-shadow: 0 0 0 2px rgb(239, 230, 230), 0 0 10px rgb(202, 188, 188);
       }
-   }
-   .products{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      margin-top: -200px;
-      margin-left: 10px;
-      margin-right: 10px;
-   
-      div{
-         display: flex;
-         flex-direction: column;
-         width: 260px;
-         background: rgb(255, 255, 255);
-         margin: auto;
-   
-         h1{
-            font-size: 18px;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            margin-left: 25px;
-         }
-         img{
-            width: 80%;
-            margin: auto;
-         }
-         p{
-            font-size: 12px;
-            font-weight: normal;
-            font-family: Arial, Helvetica, sans-serif;
-            margin-left: 25px;
-         }
-      }
-   }
-   .feature{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      margin: auto;
-
-      div{
-         background: #ffffff;
-         width: 280px;
-         height: 350px;
-         margin: 20px 10px;
-
-         h2{
-            font-size: 16px;
-            margin: 0;
-            margin-left: 10px;
-            margin-bottom: 0px;
-         }
-
-         .container{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin: 0;
-            max-width: 100%;
-
-            .item{
-               display: flex;
-               width: 120px;
-               background: #ffffff;
-               height: 120px;
-               margin-bottom: 0;
-   
-               img{
-                  width: 100%;
-                  object-fit: cover;
-               }
-            }
-            .name{
-               font-size: 14px;
-               margin: 0;
-               margin-left: 10px;
-               width: 120px;
-               overflow: hidden;
-            }
-         }
-         
-      }
-/*
-      .container{
-         width: 250px;
-         background: #987e7e;
-        
-         
-         .item{
-            width: 100px;
-            background: #822e2e;
-         }
-      }*/
    }
 }

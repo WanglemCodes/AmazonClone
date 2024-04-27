@@ -89,4 +89,113 @@
          }
       }*/
    }
+   .slides {
+      display: flex;
+      background: #a67e7e;
+      height: 460px;
+      overflow: hidden;
+      margin: 20px 20px;
+      
+      .slides-container{
+         display: flex;
+      }
+
+      .slide-container{
+         display: grid;
+         
+         a{
+            width: 220px;
+            margin: 20px 20px;
+            background: rgb(255, 255, 255);
+
+            .image{
+               height: 250px;
+               overflow: hidden;
+               display: flex;
+               justify-content: center;
+
+               img{
+                  object-fit: cover;
+               }
+            }
+            .names{
+               max-height: 120px;
+               
+               .name{
+                  color: rgba(95, 147, 198, 0.881);
+                  font-size: 16px;
+                  font-weight: normal;
+                  line-height: 20px;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 5;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+
+               }
+            }
+            .rating{
+               color: rgba(95, 147, 198, 0.881);
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               background: #ffffff;
+               height: 25px;
+               margin: 4px 0px;
+
+               .star{
+                  background-image: url(https://m.media-amazon.com/images/S/sash/McBZv0ZvnbehkIx.png);
+                  background-position-x: 212px;
+                  background-position-y: 550px;
+                  background-size: 435px;
+                  width: 102px;
+                  
+               }
+               .counts{
+                  margin-top: 8px;
+                  font-size: 14px;
+               }
+            }
+            .price{
+               color: rgb(35, 32, 32);
+               font-size: 18px;
+            }
+            .price::before{
+               content: "$";
+
+            }
+         }
+      }
+   }
+   
+   .leftBtn{
+      content: " ";
+      height: 35px;
+      width: 30px;
+      background: #f6f3f3;
+      background-image: url(https://m.media-amazon.com/images/S/sash/McBZv0ZvnbehkIx.png);
+      background-position-x: -130px;
+      background-position-y: 0px;
+      background-size: 450px;
+      position: absolute;
+      border: 1px solid rgb(173, 168, 168);
+      border-radius: 8px;
+      left: 40px;
+      margin-top: 180px;
+      z-index: 1;
+   }
+   .rightBtn{
+      content: " ";
+      height: 35px;
+      width: 30px;
+      background: #f6f3f3;
+      background-image: url(https://m.media-amazon.com/images/S/sash/McBZv0ZvnbehkIx.png);
+      background-position-x: -110px;
+      background-position-y: 0px;
+      background-size: 450px;
+      position: absolute;
+      border: 1px solid rgb(173, 168, 168);
+      border-radius: 8px;
+      left: 94%;
+      margin-top: 180px;
+   }
 }
