@@ -2,7 +2,7 @@
    box-sizing: border-box;
    display: grid;
    grid-template-columns: 1fr 1fr;
-   margin: 0px 10px;
+   margin: 10px 10px;
    font-family: Arial, Helvetica, sans-serif;
 
    .product-img{
@@ -16,9 +16,30 @@
       grid-template-columns: 3fr 2fr;
 
       .product-description{
-         margin: 10px;
+         margin: 10px 20px;
          display: flex;
          flex-direction: column;
+         color: rgb(84, 150, 225);
+
+         .product-name{
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 30px;
+            color: black;
+         }
+         .store-link{
+            font-size: 15px;
+         }
+         .rating{
+            margin: 4px 0px;
+            font-size: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .stars{
+               color: #000;
+            }
+         }
       }
       .order-description{
          margin: 10px;

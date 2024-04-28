@@ -11,7 +11,6 @@ const homePage = `
    <span class="leftBtn"></span>
    <span class="rightBtn"></span>
 </div>
-<div class="movie"></div>
 `;
 
 document.querySelector('.home').innerHTML = homePage;
@@ -35,18 +34,13 @@ banner.appendChild(content)
 banner.appendChild(rightBtn)
 let count = 0;
 
-banner.addEventListener('click', (e) => {
-   e.stopPropagation();
+banner.addEventListener('click', () => {
    const ref = data[count];
-   console.log('clicked banner')
-   console.log(ref.link)
    //fetch()
 })
 
 //Left Slider
-leftBtn.addEventListener('click', (e) => {
-   e.stopPropagation();
-   console.log('clicked')
+leftBtn.addEventListener('click', () => {
    //e.preventDefault();
    if(count > 0){
       count--;
@@ -64,9 +58,7 @@ leftBtn.addEventListener('click', (e) => {
 })
 
 //Right Slider
-rightBtn.addEventListener('click', (e) => {
-   e.stopPropagation();
-   console.log('clicked')
+rightBtn.addEventListener('click', () => {
    if( count < data.length - 1){
       count++;
       const img = data[count];
@@ -147,13 +139,10 @@ let left = document.querySelector('.slides .leftBtn');
 let right = document.querySelector('.slides .rightBtn');
 let slider = document.querySelector('.slides-container');
 
-console.log(left);
-console.log(slider);
-
 let num = 0;
 
-left.addEventListener('click', () => {
-   console.log('clicked')
+right.addEventListener('click', () => {
+   //console.log('clicked')
    if(num < 60){
       num += 30;
       slider.style.transform = `translateX(-${num}%)`;
@@ -166,8 +155,8 @@ left.addEventListener('click', () => {
    }
 
 })
-right.addEventListener('click', () => {
-   console.log('clicked')
+left.addEventListener('click', () => {
+   //console.log('clicked')
    if(num > 0){
       num -= 30;
       slider.style.transform = `translateX(-${num}%)`;
@@ -176,3 +165,9 @@ right.addEventListener('click', () => {
       slider.style.transform = `translateX(${num}%)`;
    }
 })
+
+let cart = [];
+
+/*const addToCart = () => {
+   const item = 
+}*/

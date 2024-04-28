@@ -335,3 +335,5 @@ export const movies = [
       price: '',
    },
 ]
+
+export const cart = [];

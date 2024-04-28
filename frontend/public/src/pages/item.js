@@ -1,3 +1,5 @@
+import {cart} from "../data/data.js";
+
 
 const itemPage = `
 <div class="item"></div>
@@ -5,26 +7,37 @@ const itemPage = `
 
 document.querySelector('.itemPage').innerHTML = itemPage;
 
+const items = {
+   id: '1',
+   name: 'Samsung Galaxy Buds2 True Wireless In Ear Earbuds Noise Cancelling Ambient Sound Bluetooth Lightweight Comfort Fit Touch Control, International Version (Graphite)',
+   image: './src/images/laptop.jpg',
+   price: '7,999',
+   rating:{
+      stars: '4.5',
+      counts: '6,229',
+   },
+   'delivery-time':'Friday, 3 May.',
+}
+
 let item = `
-<div class="product">
+<div class="product" key="${items.id}">
    <div class="product-img">
-      <img src="./src/images/laptop.jpg"/>
+      <img src="${items.image}"/>
    </div>
    <div class="product-details">
       <div class="product-description">
          <span class="product-name">
-            Samsung Galaxy Buds2 True Wireless In Ear Earbuds Noise Cancelling Ambient Sound Bluetooth Lightweight Comfort Fit Touch Control,International Version (Graphinte)
+            ${items.name}
          </span>
          <span class="store-link">Visit the Samsung Store</span>
-         <span class="rating">4.5
-            <span class="stars">*****</span>
-            <span class="counts">6,229</span>
-         </span>
-         <span >ratings</span>
+         <div class="rating">
+            <span class="stars">${items.rating.stars}*****</span>
+            <span class="counts">${items.rating.counts}ratings</span>
+         </div>
          <span class="deal">Limited time deal</span>
       </div>
       <div class="order-description">
-         <span class="price">7,999</span>
+         <span class="price">${items.price}</span>
          <span class="delivery">FREE delivery
             <span class="date">Friday, 3 May.</span>
          </span>
@@ -41,3 +54,4 @@ let item = `
 `;
 
 document.querySelector('.item').innerHTML = item;
+
