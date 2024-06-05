@@ -1,3 +1,32 @@
+const apiKey = "6BxUsHM1A4jCuqhwIJBL2g5wXNRZW2IF82xIZEwZsFhm8bCqgsyOlzCN";
+
+/*
+export const currency = () => {
+   let dollar = 1;
+   let rupee = 70;
+}
+export const method = {
+   dollar: (lol) => {
+      lol = lol;
+      console.log("Dollar")
+      console.log(lol)
+   }
+}
+*/
+
+
+export const convertCurrency = () => {
+   let dollar = 1;
+   let rupee = 70;
+   let result = "";
+   let price = "$ 105";
+   result = price.split(" ")[0];
+   console.log(result)
+   let final = 300 / 70;
+   //console.log(final)
+   //console.log(result * rupee)
+}
+
 export const bannerData = [
    {
       image: './src/images/banner.jpg',
@@ -22,28 +51,48 @@ export const products = [
       name: 'Laptop',
       image: './src/images/laptop.jpg',
       price: '25',
-      category: ''
+      category: '',
+      rating:{
+         stars: '4.5',
+         counts: '6,229',
+      },
+      'delivery-time':'Friday, 3 May.',
    },
    {  
       id: '2',
       name: 'Watch',
       image: './src/images/watch.jpg',
       price: '34',
-      category: ''
+      category: '',
+      rating:{
+         stars: '4.5',
+         counts: '6,229',
+      },
+      'delivery-time':'Friday, 3 May.',
    },
    {
       id: '3',
       name: 'Laptop',
       image: './src/images/laptop.jpg',
       price: '2.9',
-      category: ''
+      category: '',
+      rating:{
+         stars: '4.5',
+         counts: '6,229',
+      },
+      'delivery-time':'Friday, 3 May.',
    },
    {  
       id: '4',
       name: 'Watch',
       image: './src/images/watch.jpg',
       price: '10.09',
-      category: ''
+      category: '',
+      rating:{
+         stars: '4.5',
+         counts: '6,229',
+      },
+      'delivery-time':'Friday, 3 May.',
    },
 ];
 
@@ -73,66 +122,66 @@ export const featureProducts = [
    [
       {
          name: 'L1',
-         image: '',
+         image: 'https://source.unsplash.com/random/200x300?laptop',
          price: '',
       },
       {
          name: 'L2',
-         image: '',
+         image: 'https://source.unsplash.com/200x300/?laptop',
          price: '',
       },
       {
          name: 'L3',
-         image: '',
+         image: 'https://www.pexels.com/search/laptop/',
          price: '',
       },
       {
          name: 'L4',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       }
    ],
    [
       {
          name: 'W1',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       },
       {
          name: 'W2',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       },
       {
          name: 'W3',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       },
       {
          name: 'W4',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       }
    ],
    [
       {
          name: 'C1',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       },
       {
          name: 'C2',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       },
       {
          name: 'C3',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       },
       {
          name: 'C4',
-         image: '',
+         image: 'https://picsum.photos/id/237/200/300',
          price: '',
       }
    ]
@@ -336,4 +385,29 @@ export const movies = [
    },
 ]
 
-export const cart = [];
+export const cart = [
+   {
+      id: '1',
+      name: 'No 1 Ailun Glass Screen Protector for iPhone 14 / iPhone 13/ Pro [6.1 Inch] Display 3 Pack Tempered Glass Ailun Glass Screen Protector for iPhone 14 / iPhone 13/ Pro [6.1 Inch] Display 3 Pack Tempered Glass Ailun Glass Screen Protector for iPhone 14 / iPhone 13/ Pro [6.1 Inch] Display 3 Pack Tempered Glass',
+      image: './src/images/feat7.jpg',
+      price: 7.09,
+      seller: '...',
+      shipping: false,
+      rating: {
+         stars: '',
+         counts: '124.344'
+      }
+   },
+   {
+      id: '2',
+      name: 'no 2 Ailun Glass Screen Protector for iPhone 14 / iPhone 13/ Pro [6.1 Inch] Display 3 Pack Tempered Glass',
+      image: './src/images/feat8.jpg',
+      price: 7.09,
+      seller: 'Manu Sharma',
+      shipping: true,
+      rating: {
+         stars: '',
+         counts: '124.344'
+      }
+   },
+];

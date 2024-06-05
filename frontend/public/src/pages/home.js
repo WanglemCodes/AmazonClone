@@ -2,6 +2,8 @@ import {bannerData as data} from "../data/data.js";
 import {products} from '../data/data.js';
 import { featureProducts } from "../data/data.js";
 import { slides } from "../data/data.js";
+//import { method } from "../data/data.js";
+import { convertCurrency } from "../data/data.js";
 
 const homePage = `
 <div class="banner"></div>
@@ -12,7 +14,13 @@ const homePage = `
    <span class="rightBtn"></span>
 </div>
 `;
-
+convertCurrency()
+/*
+console.log("Hi");
+console.log(method.dollar)
+method.dollar()
+method.dollar("Hi")
+*/
 document.querySelector('.home').innerHTML = homePage;
 
 let banner = document.querySelector('.banner');

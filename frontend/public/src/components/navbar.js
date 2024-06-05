@@ -39,7 +39,7 @@ let navbar = `
          <span class="span1">Returns</span>
          <span class="span2">& Orders</span>
       </a>
-      <a href="./item.html" class="cart">
+      <a href="./cart.html" class="cart">
          <span class="count">0</span>
          <span class="cartIcon">
          </span>

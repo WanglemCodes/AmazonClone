@@ -1,0 +1,236 @@
+body{
+   background: #c2b7b7;
+}
+.cartPage{
+   display: grid;
+   margin: 0;
+   background: #c4bbbb;
+   grid-template-columns: 5fr 2fr;
+
+   .cart{
+      margin: 20px;
+      background: #ffffff;
+
+      .heading{
+         margin-left: 20px;
+         
+         font-size: 18px;
+         
+         h1{
+            font-weight: 200;
+            margin-bottom: 10px;
+         }
+      }
+
+      .item-info{
+         display: flex;
+         justify-content: space-between;
+         color: #141414;
+         margin-top: 0;
+
+         .selected{
+            margin-left: 20px;
+         }
+         .price{
+            margin-right: 20px;
+         }
+      }
+      
+      .items{
+         display: grid;
+         margin-top: 10px;
+         padding: 0px 0px;
+         background: inherit;
+         border-top: 1px solid rgb(212, 206, 206);
+   
+         .item{
+            display: flex;
+            height: 280px;
+            background: #ffffff;
+            justify-content: space-between;
+            padding: 20px;
+            
+            .image{
+               min-width: 250px;
+               min-height: 250px;
+               display: flex;
+               
+   
+               img{
+                  width: 100%;
+                  object-fit: cover;
+               }
+            }
+   
+            .details{
+               display: grid;
+               grid-template-columns: 3fr 1fr;
+               
+               .product-details{
+                  margin-left: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  font-size: 14px;
+                  font-weight: normal;
+                  
+                  span{
+                     margin: 1px 0px;
+                     font-weight: normal;
+                     
+                  }
+                  .stock{
+                     font-size: 12px;
+                  }
+                  .shipping{
+                     font-size: 12px;
+                     color: #000000;
+                  }
+                  
+                  .fulfilled{
+                     height: 20px;
+                     width: 60px;
+                     background-repeat: repeat-x;
+                     background-image: url('https://m.media-amazon.com/images/G/31/marketing/fba/fba-badge_18px-2x._CB485942108_.png');
+                     background-size: 100%;
+                  }
+                  
+                  a{
+                     font-size: 18px;
+                     font-weight: bold;
+                     display: -webkit-box;
+                     -webkit-box-orient: vertical;
+                     -webkit-line-clamp: 3;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                  }
+                  .colour{
+                     color: black;
+                     font-weight: bold;
+   
+                  }
+                  
+               }
+               .price-info{
+                  min-width: 110px;
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 10px;
+                  font-weight: bold;
+                  font-size: 12px;
+                  font-family: Arial, Helvetica, sans-serif;
+   
+                  span{
+                     align-self: flex-end;
+                     margin: 1px 1px;
+                  }
+                  
+                  
+                  .off{
+                     background: #db3376;
+                     padding: 4px 4px;
+                     border-radius: 2px;
+                  }
+                  
+                  .deal{
+                     color: #db3376;
+                  }
+                  .price{
+                     font-size: 16px;
+                  }
+                  .discount{
+                     color: #5d5656;
+                     .cut-off{
+                        width: 25px;
+                        background: #000;
+                        height: 0.5px;
+                        color: #000;
+                        position: absolute;
+                        margin-top: 6px;
+                     }
+                  }
+                  
+               }
+               .option{
+                  margin-left: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+                  font-size: 14px;
+                  color: rgb(118, 169, 239);
+   
+                  .qty{
+                     width: 60px;
+                     height: 30px;
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     border: 1px solid rgb(196, 192, 192);
+                     background: #c4cfd6;
+                     border-radius: 8px;
+   
+                     span{
+                        z-index: 1;
+                        font-size: 14px;
+                        color: #000;
+                        align-self: center;
+                        margin-right: 18px;
+                        
+                     }
+   
+                     select{
+                        padding-left: 30px;
+                        position: absolute;
+                        border: none;
+                        border-radius: 2px;
+                        background-color: inherit;
+                     }
+                     select:focus{
+                        outline: none;
+                     }
+                     select:hover{
+                        
+                     }
+                  }
+                  .qty:hover{
+                     background: #c1bbbb;
+                  }
+                  .qty:focus{
+                     outline: rgb(169, 222, 237) solid 3px;
+                     border-radius: 8px;
+                  }
+               }
+               
+            }
+         }
+        
+      }
+   }
+
+   .total-container{
+      margin: 20px;
+      background: inherit;
+      margin-left: 0;
+      
+
+      .total{
+         display: flex;
+         background: #ffffff;
+         flex-direction: column;
+         padding: 20px;
+
+         h1{
+            font-size: 20px;
+            font-weight: normal;
+         }
+
+         button{
+            justify-self: center;
+            height: 30px;
+            border: none;
+            border-radius: 8px;
+            background: #f0e034;
+         }
+         
+      }
+   } 
+}

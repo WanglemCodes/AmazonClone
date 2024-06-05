@@ -128,4 +128,64 @@
          }
       }
    }
+   .itemPage{
+
+      .product{
+         display: flex;
+         flex-direction: column;
+   
+         .product-details{
+            display: flex;
+            flex-direction: column;
+         }
+      }
+   }
+   .cartPage{
+      grid-template-columns: 393px;
+
+      .cart{
+         display: grid;
+
+         .items{
+            display: grid;
+            
+
+            .item{
+               display: grid;
+               grid-template-rows: 1fr;
+               height: 430px;
+               margin: 2px;
+
+               .checkmark{
+                  height: 10px;
+                  margin-top: -10px;
+               }
+               .image{
+                  margin-top: 0px;
+               }
+               .details{
+
+                  margin-top: 10px;
+                  .price-info{
+                     
+                  }
+
+                  .option{
+                     
+                     display: grid;
+                     grid-template-columns: 1fr 1fr;
+
+                     div{
+
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .total-container{
+         width: 100%;
+      }
+   }
 }
+

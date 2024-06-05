@@ -4,6 +4,7 @@
    grid-template-columns: 1fr 1fr;
    margin: 10px 10px;
    font-family: Arial, Helvetica, sans-serif;
+   background: #ffffff;
 
    .product-img{
 
@@ -38,15 +39,88 @@
 
             .stars{
                color: #000;
+               display: flex;
+
+               .star-img{
+                  background-image: url(https://m.media-amazon.com/images/S/sash/McBZv0ZvnbehkIx.png);
+                  background-position-x: 219px;
+                  background-position-y: 556px;
+                  background-size: 420px;
+                  width: 83px;
+                  height: 20px;
+                  margin-left: 1px;
+               }
+            }
+            .stars::after{
+               content: " ";
+               
             }
          }
       }
       .order-description{
-         margin: 10px;
-         padding: 20px;
-         border: 1px solid black;
+         margin: 0px 0px;
+         padding: 10px;
+         border: 1px solid rgb(196, 186, 186);
          display: flex;
          flex-direction: column;
+         font-family: Arial, Helvetica, sans-serif;
+
+         .price{
+            font-size: 20px;
+            font-weight: normal;
+            margin: 10px 0px;
+         }
+         .delivery-option{
+            font-size: 14px;
+            margin: 4px 0px;
+
+            .delivery-cost{
+               color: rgb(86, 139, 218);
+            }
+            .date{
+               color: #080808;
+               font-weight: 600;
+            }
+         }
+         .address{
+            display: flex;
+            margin: 20px 0px;
+            .icon{
+               
+               background-image: url(https://m.media-amazon.com/images/S/sash/kIT-Lj9i1Bch8yi.png);
+               width: 20px;
+               background-repeat: no-repeat;
+            }
+            .location{
+               color: rgb(77, 140, 208);
+               font-size: 12px;
+            }
+         }
+         .stock{
+            font-size: 18px;
+         }
+         .quantity{
+            margin: 10px 0px;
+
+            select{
+               width: 30px;
+               height: 20px;
+            }
+         }
+         .cart-btn{
+            background: rgb(222, 201, 13);
+            margin: 5px 0px;
+            height: 30px;
+            border-radius: 50px;
+            border: none;
+         }
+         .buy-btn{
+            background: #f0b026e6;
+            margin: 5px 0px;
+            height: 30px;
+            border-radius: 50px;
+            border: none;
+         }
       }
    }
 }
