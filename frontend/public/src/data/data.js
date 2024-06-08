@@ -13,6 +13,32 @@ export const method = {
    }
 }
 */
+/*
+fetch("http://localhost:8000/wang", {
+   method: 'Get',
+   headers: {
+      'Content-Type': 'application/json',
+      'Authorization': ''
+   }
+})
+   .then(response => response.json())
+   .then(data => console.log(data))
+   .catch(error => console.log("error:", error));
+console.log(fetch());*/
+
+
+export const user = {
+   id: "1",
+   name: "Wang",
+   phone: "1234567890",
+   country: "IND",
+   address: {
+      city: "Dimapur",
+      pin: "798621",
+      house: "566",
+      landmark: "Kevijau, lane 7"
+   }
+};
 
 
 export const convertCurrency = () => {

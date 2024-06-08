@@ -5,6 +5,29 @@ import { slides } from "../data/data.js";
 //import { method } from "../data/data.js";
 import { convertCurrency } from "../data/data.js";
 
+async function fetchData() {
+   try {
+      const res = await fetch("http://localhost:8000/wang", {
+         method: 'GET',
+         headers: {
+            'Content-Type': 'application/json'
+         }
+      });
+      if (!res.ok) {
+         throw new Error(`Network response was not ok: ${res.statusText} (status: ${res.status})`)
+      }
+      const data = await res.json();
+      console.log('data received:', data);
+      return res.json();
+   } catch (error) {
+      console.error("There was an error", error);
+      return res.json(error);
+   }
+}
+
+fetchData();
+
+
 const homePage = `
 <div class="banner"></div>
 <div class="products"></div>
@@ -14,7 +37,7 @@ const homePage = `
    <span class="rightBtn"></span>
 </div>
 `;
-convertCurrency()
+//convertCurrency()
 /*
 console.log("Hi");
 console.log(method.dollar)
@@ -87,7 +110,7 @@ products.forEach((product) => {
    <a href="./item.html">
       <div key="${product.id}" class="product">
          <h1>${product.name}</h1>
-         <img src="${product.image}" />
+         <img src="" />
          <p><span>$</span>${product.price}</p>
       </div>
    </a>
