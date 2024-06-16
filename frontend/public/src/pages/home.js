@@ -5,7 +5,32 @@ import { slides } from "../data/data.js";
 //import { method } from "../data/data.js";
 import { convertCurrency } from "../data/data.js";
 
-async function fetchData() {
+const fetchData = async () => {
+   try{
+      const urls = ['http://localhost:8000/wang', 'http://localhost:8000/products'];
+
+      const requests = urls.map(url => fetch(url));
+
+      const responses = await Promise.all(requests);
+
+      const dataPromises = responses.map(response => response.json());
+
+      const data = await Promise.all(dataPromises);
+
+      console.log('Data from Wang', data[0]);
+      console.log('Data from products', data[1]);
+      
+      return data;
+   }catch(error){
+      console.error('Error fetching data:', error);
+      throw error;
+   }
+}
+
+fetchData();
+/*
+
+const  fetchUser = async () => {
    try {
       const res = await fetch("http://localhost:8000/wang", {
          method: 'GET',
@@ -18,15 +43,38 @@ async function fetchData() {
       }
       const data = await res.json();
       console.log('data received:', data);
-      return res.json();
+      return data;
    } catch (error) {
       console.error("There was an error", error);
-      return res.json(error);
+      return error;
    }
 }
 
-fetchData();
+fetchUser();
 
+const fetchProduct = async () => {
+   try {
+      const res = await fetch("http://localhost:8000/products", {
+         method: 'GET',
+         headers: {
+            'Content-Type': 'application/json'
+         }
+      });
+      if (!res.ok) {
+         throw new Error(`Network response was not ok: ${res.statusText} (status: ${res.status})`)
+      }
+      const data = await res.json();
+      console.log('data received:', data);
+      return data;
+   } catch (error) {
+      console.error("There was an error", error);
+      //return res.json(error);
+      return error;
+   }
+}
+
+fetchProduct();
+*/
 
 const homePage = `
 <div class="banner"></div>
