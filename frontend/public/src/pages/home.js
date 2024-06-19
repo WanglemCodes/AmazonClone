@@ -3,11 +3,15 @@ import {products} from '../data/data.js';
 import { featureProducts } from "../data/data.js";
 import { slides } from "../data/data.js";
 //import { method } from "../data/data.js";
+import { fetchUser } from "../data/data.js";
 import { convertCurrency } from "../data/data.js";
 
+const userId = 1;
+fetchUser(1)
+/*
 const fetchData = async () => {
    try{
-      const urls = ['http://localhost:8000/wang', 'http://localhost:8000/products'];
+      const urls = ["http://localhost:8000/users", "http://localhost:8000/products"];
 
       const requests = urls.map(url => fetch(url));
 

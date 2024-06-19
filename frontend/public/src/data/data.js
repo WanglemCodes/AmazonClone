@@ -1,5 +1,25 @@
 const apiKey = "6BxUsHM1A4jCuqhwIJBL2g5wXNRZW2IF82xIZEwZsFhm8bCqgsyOlzCN";
 
+export const fetchUser = async (userId) => {
+   try{
+      const res = await fetch(`http://localhost:8000/user/${userId}`, {
+         method: 'GET',
+         headers: {
+            'Content-Type': 'application/json'
+         }
+      });
+      if(!res.ok){
+         throw new Error(`Network response was not ok: ${res.statusText} (status: ${res.status})`)
+      }
+      const data = await res.json();
+      console.log('data received:', data);
+      return data;
+   }catch(error){
+      console.error("There was an error", error);
+      return error;
+   }
+}
+
 /*
 export const currency = () => {
    let dollar = 1;
