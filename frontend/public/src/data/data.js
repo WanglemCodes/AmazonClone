@@ -20,6 +20,8 @@ export const fetchUser = async (userId) => {
    }
 }
 
+//const userData = fetchUser().data;
+
 /*
 export const currency = () => {
    let dollar = 1;

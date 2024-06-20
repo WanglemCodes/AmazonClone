@@ -7,7 +7,8 @@ import { fetchUser } from "../data/data.js";
 import { convertCurrency } from "../data/data.js";
 
 const userId = 1;
-fetchUser(1)
+const userData = await fetchUser(1);
+//console.log(userData[0])
 /*
 const fetchData = async () => {
    try{
