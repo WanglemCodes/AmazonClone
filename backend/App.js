@@ -1,5 +1,5 @@
 const express = require("express");
-const mySql = require("mysql");
+const mySql = require("mysql2");
 const cors = require("cors");
 
 
@@ -8,11 +8,14 @@ app.use(cors());
 //app.use(json())
 
 const user = mySql.createConnection({
-   host : "localHost",
-   user : "Wang",
-   port : "3100",
-   password : "Wang1234",
-   database : "amazon_user"
+   host : "localhost",
+   user : "root",
+   port : "3800",
+   password : "Ashangsko1234",
+   database : "amazon_user",
+   authPlugins: {
+      caching_sha2_password: true
+    }
 })
 user.connect((err) => {
    if (err) {
@@ -21,11 +24,11 @@ user.connect((err) => {
    }
    console.log('Connected as id ' + user.threadId);
 });
-
+/*
 const products = mySql.createConnection({
    host : "localHost",
    user : "Wang",
-   port : "3100",
+   port : "3800",
    password : "Wang1234",
    database : "amazon_product"
 })
@@ -36,7 +39,7 @@ products.connect((err) => {
    }
    console.log('Connected as id ' + user.threadId);
 });
-
+*/
 //user.end();
 
 app.get("/wanglem", (req, res) => {
@@ -44,7 +47,7 @@ app.get("/wanglem", (req, res) => {
    res.send('Hello from the backend!');
 })
 //ALl user
-app.get("/users", (req, res) => {
+app.get("/user", (req, res) => {
    const q = "SELECT * FROM user_info";
 
    user.query(q, (err, data) => {
