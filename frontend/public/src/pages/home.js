@@ -4,7 +4,6 @@ import { featureProducts } from "../data/data.js";
 import { slides } from "../data/data.js";
 //import { method } from "../data/data.js";
 import { fetchUser } from "../data/data.js";
-import { convertCurrency } from "../data/data.js";
 
 const userId = 1;
 const userData = await fetchUser(1);

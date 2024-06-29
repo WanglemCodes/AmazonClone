@@ -21,20 +21,6 @@ export const fetchUser = async (userId) => {
 }
 
 //const userData = fetchUser().data;
-
-/*
-export const currency = () => {
-   let dollar = 1;
-   let rupee = 70;
-}
-export const method = {
-   dollar: (lol) => {
-      lol = lol;
-      console.log("Dollar")
-      console.log(lol)
-   }
-}
-*/
 /*
 fetch("http://localhost:8000/wang", {
    method: 'Get',
@@ -61,19 +47,6 @@ export const user = {
       landmark: "Kevijau, lane 7"
    }
 };
-
-
-export const convertCurrency = () => {
-   let dollar = 1;
-   let rupee = 70;
-   let result = "";
-   let price = "$ 105";
-   result = price.split(" ")[0];
-   console.log(result)
-   let final = 300 / 70;
-   //console.log(final)
-   //console.log(result * rupee)
-}
 
 export const bannerData = [
    {

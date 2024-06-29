@@ -24,13 +24,16 @@ user.connect((err) => {
    }
    console.log('Connected as id ' + user.threadId);
 });
-/*
+
 const products = mySql.createConnection({
-   host : "localHost",
-   user : "Wang",
+   host : "localhost",
+   user : "root",
    port : "3800",
-   password : "Wang1234",
-   database : "amazon_product"
+   password : "Ashangsko1234",
+   database : "amazon_product",
+   authPlugins: {
+      caching_sha2_password: true
+    }
 })
 products.connect((err) => {
    if (err) {
@@ -39,7 +42,7 @@ products.connect((err) => {
    }
    console.log('Connected as id ' + user.threadId);
 });
-*/
+
 //user.end();
 
 app.get("/wanglem", (req, res) => {
@@ -62,7 +65,7 @@ app.get("/user", (req, res) => {
 app.get("/user/:id", (req, res) => {
    const userId = req.params.id;
    console.log(userId);
-   const q = "SELECT * FROM user_info WHERE customer_id = ?";
+   const q = "SELECT * FROM user_info WHERE id = ?";
 
    user.query(q,[userId], (err, data) => {
       if (err) {
@@ -73,7 +76,7 @@ app.get("/user/:id", (req, res) => {
    })
 })
 //All
-app.get("/products", (req, res) => {
+app.get("/product", (req, res) => {
    const q = "SELECT * FROM products";
    products.query(q, (err, data) => {
       if (err) {
@@ -82,9 +85,9 @@ app.get("/products", (req, res) => {
       return res.json(data)
    })
 })
-//5 only
+//4 only
 app.get("/product/only4", (req, res) => {
-   const q = "SELECT * FROM products LIMIT 5";
+   const q = "SELECT * FROM products LIMIT 4";
    products.query(q, (err, data) => {
       if (err) {
          return res.json(err)
@@ -94,7 +97,7 @@ app.get("/product/only4", (req, res) => {
 })
 //4 from motor category
 app.get("/product/category/wise", (req, res) => {
-   const q = "SELECT * FROM products WHERE category = 'motor' LIMIT 4";
+   const q = "SELECT * FROM products WHERE category = 'laptop' LIMIT 4";
    products.query(q, (err, data) => {
       if (err) {
          return res.json(err)
