@@ -7,6 +7,27 @@ import { fetchUser } from "../data/data.js";
 
 const userId = 1;
 const userData = await fetchUser(1);
+
+
+sessionStorage.setItem('username', 'John Smith');
+const username = sessionStorage.getItem('username');
+console.log(username);
+//const rm = sessionStorage.removeItem('username');
+
+
+const name = "Name";
+const value = "Wang";
+const setCookie = (Name, Value, Days) => {
+   let expires = "";
+   if (Days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (Days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+   }
+   document.cookie = Name + "=" + (Value || "") + expires + "; path=/";
+}
+setCookie(name, value, 7);
+
 //console.log(userData[0])
 /*
 const fetchData = async () => {
