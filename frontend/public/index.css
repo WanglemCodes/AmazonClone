@@ -103,7 +103,7 @@ body{
       flex-grow: 1;
       display: flex;
       min-width: 400px;
-      max-width: 650px;
+      max-width: 950px;
       padding-left: 6px;
       padding-right: 6px;
       align-items: center;

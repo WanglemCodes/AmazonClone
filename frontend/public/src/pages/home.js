@@ -1,3 +1,4 @@
+//import { getCookies } from "undici-types";
 import {bannerData as data} from "../data/data.js";
 import {products} from '../data/data.js';
 import { featureProducts } from "../data/data.js";
@@ -27,6 +28,18 @@ const setCookie = (Name, Value, Days) => {
    document.cookie = Name + "=" + (Value || "") + expires + "; path=/";
 }
 setCookie(name, value, 7);
+
+const getCookie = (name) => {
+   const nameEQ = name + "=";
+   const ca = document.cookie.split(';');
+   for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+   }
+   return null;
+}
+console.log(getCookie(name));
 
 //console.log(userData[0])
 /*
