@@ -3,8 +3,8 @@
 let navbar = `
 <div class="topBar">
    <div class="left">
-      <a class="logo"></a>
-      <a class="location">
+      <a class="logo" href="./index.html"></a>
+      <a class="location" href="./login.html">
          <div class="img"></div>
          <div class="address">
             <span class="customer">Deliver to kumar</span>

@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
-//app.use(json())
+app.use(express.json())
 
 const user = mySql.createConnection({
    host : "localhost",
@@ -44,6 +44,28 @@ products.connect((err) => {
 });
 
 //user.end();
+app.post('/authuser', (req, res) => {
+   const value = req.body.credential;
+   console.log(value);
+   console.log('from server')
+   const q = "SELECT * FROM user_info WHERE phone = ?";
+
+   user.query(q, [value], (err, data) => {
+      if(err){
+         console.log(err);
+         return res.json(err)
+      }
+      const usr = data;
+      console.log(usr);
+      if(data.length === 0){
+         console.log('user not found')
+      }else{
+         console.log('user found')
+      }
+      
+      return res.json(data);
+   })
+})
 
 app.get("/wanglem", (req, res) => {
    console.log("From backend")

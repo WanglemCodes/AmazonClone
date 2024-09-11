@@ -20,6 +20,27 @@ export const fetchUser = async (userId) => {
    }
 }
 
+export const authUser = async (credential) => {
+   try{
+      const res = await fetch(`http://localhost:8000/authuser/`, {
+         method: 'post',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({
+            credential
+         })
+      });
+      if(!res.ok){
+         throw new Error(`Network response was not ok: ${res.statusTect}
+            (status: ${res.status})`)
+      }
+      return res.json();
+   }catch(err){
+      return err;
+   }
+}
+
 //const userData = fetchUser().data;
 /*
 fetch("http://localhost:8000/wang", {

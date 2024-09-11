@@ -196,7 +196,7 @@ products.forEach((product) => {
    <a href="./item.html">
       <div key="${product.id}" class="product">
          <h1>${product.name}</h1>
-         <img src="" />
+         <img src="${product.image}" />
          <p><span>$</span>${product.price}</p>
       </div>
    </a>
