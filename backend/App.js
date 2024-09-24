@@ -1,4 +1,6 @@
 const express = require("express");
+const bcypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const mySql = require("mysql2");
 const cors = require("cors");
 
@@ -42,6 +44,23 @@ products.connect((err) => {
    }
    console.log('Connected as id ' + user.threadId);
 });
+const bcrypt = require('bcryptjs');
+
+// Generate salt with 10 rounds (default)
+const salt = bcrypt.genSaltSync(10);
+
+// Hash the password with the generated salt
+const hashedPassword = bcrypt.hashSync('your_password', salt);
+
+console.log(hashedPassword);
+
+const isValid = bcrypt.compareSync('your_password', hashedPassword);
+
+if (isValid) {
+  console.log('Password is valid');
+} else {
+  console.log('Invalid password');
+}
 
 //user.end();
 app.post('/authuser', (req, res) => {
@@ -62,17 +81,22 @@ app.post('/authuser', (req, res) => {
       }else{
          console.log('user found')
       }
-      
       return res.json(data);
    })
 })
+
+app.get("/user", (req, res) => {
+   const pw = req.body.password;
+   console.log(pw)
+})
+
 
 app.get("/wanglem", (req, res) => {
    console.log("From backend")
    res.send('Hello from the backend!');
 })
 //ALl user
-app.get("/user", (req, res) => {
+app.get("/users", (req, res) => {
    const q = "SELECT * FROM user_info";
 
    user.query(q, (err, data) => {

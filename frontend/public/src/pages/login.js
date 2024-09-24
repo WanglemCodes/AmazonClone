@@ -1,4 +1,4 @@
-import { authUser } from "../data/data.js";
+import { authUser, getUser } from "../data/data.js";
 
 const user = {
     id : 1,
@@ -12,6 +12,10 @@ const user = {
 const login = `
     <div class="loginPage1">
         <div class="logo"></div>
+        <div class="auth-error">
+            <h1>Incorrect email</h1>
+            <p>Email not found</p>
+        </div>
         <div class="container">
             <h1>Sign in</h1>
             <label for="email_ph"><b>Email or mobile phone number</b></label>
@@ -42,6 +46,19 @@ const login = `
             <button class="get-otp">Get an OTP on your phone</button>
         </div>
     </div>
+    <div class="signup" display="">
+        <span class="logo"></span>
+        <div class="container">
+            <h1 class="sign-up">Create Account</h1>
+            <label for="name" class="name">Your name</label>
+            <input type="text" class="input-name" placeholder="First and last name" name="name" required ></input>
+            <label for="contact" class="contact">Mobile number</label>
+            <input type="number" class="input-contact" placeholder="" name="contact" required>
+            <label for="password" class="password">Password</label>
+            <input type="text" class="input-pw" placeholder="At least 6 characters" name="password" required>
+            <button type="submit" class="submit">verify number</button>
+        </div>
+    </div>
 `;
 
 const loginConfirm = `
@@ -49,14 +66,23 @@ const loginConfirm = `
 `;
 
 document.querySelector(".auth").innerHTML = login;
+const num = document.querySelector('.ph-num').value;
+console.log(num.length);
 
-document.querySelector('.next').addEventListener('click',()=>{
+document.querySelector('.next').addEventListener('click',async()=>{
     const ph = document.querySelector('.ph-num').value;
-    authUser(ph);
-    document.querySelector('.ph').innerHTML = ph;
-    if (ph){
+    const res = await authUser(ph);
+    console.log(res.length);
+    //console.log(JSON.stringify(res));
+
+    if (res.error){
+        alert('Something went wrong! Please try again');
+    } else if (res.length === 1){
+        document.querySelector('.ph').innerHTML = ph;
         document.querySelector('.loginPage1').style.display = 'none';
         document.querySelector('.loginPage2').style.display = 'flex';
+    }else {
+        document.querySelector('.auth-error').style.display = 'flex';
     }
 })
 document.querySelector('.submit').addEventListener('click',()=>{

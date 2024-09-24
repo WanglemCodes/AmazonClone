@@ -21,6 +21,7 @@ export const fetchUser = async (userId) => {
 }
 
 export const authUser = async (credential) => {
+   console.log(credential);
    try{
       const res = await fetch(`http://localhost:8000/authuser/`, {
          method: 'post',
@@ -32,7 +33,28 @@ export const authUser = async (credential) => {
          })
       });
       if(!res.ok){
-         throw new Error(`Network response was not ok: ${res.statusTect}
+         throw new Error(`Network response was not ok: ${res.statusText}
+            (status: ${res.status})`)
+      }
+      return res.json();
+   }catch(err){
+      return {error: true, message: err.message};
+   }
+}
+
+export const getUser = async (credential) => {
+   try{
+      const res = await fetch(`http://localhost:8800/user`, {
+         method: 'post',
+         headers: {
+            'constent-type': 'application/json'
+         },
+         body: JSON.stringify({
+            credential
+         }),
+      });
+      if (!res.ok){
+         throw new Error(`Network response was not ok: ${res.statusText} 
             (status: ${res.status})`)
       }
       return res.json();

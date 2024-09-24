@@ -25,6 +25,25 @@
          
         }
 
+        .auth-error{
+            display: none;
+            border: solid 1px rgb(161, 154, 154);
+            background: white;
+            width: 100%;
+            border-radius: 5px;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 20px;
+            margin: 10px 0px;
+
+            h1{
+                color: red;
+                font-weight: 200;
+                font-family: Arial;
+                margin-bottom: -5px;
+            }
+        }
+
         .container {
             border: 1px solid rgb(141, 229, 232);
             border-radius: 14px;
@@ -153,6 +172,101 @@
                 span{
                     color: rgb(0, 123, 255);
                 }
+            }
+            .password{
+                font-size: 14px;
+                font-weight: 600;
+                color: #000000;
+
+                span{
+                    color: rgb(0, 123, 255);
+                    margin-left: 35%;
+                    font-size: 14px;
+                    font-weight: 200;
+                }
+            }
+            .input-pw {
+                border: 1px solid rgb(118, 120, 120);
+                border-radius: 2px;
+                margin: 10px 0px;
+                height: 24px;
+            }
+            .input-pw:focus{
+                outline: none;
+                box-shadow: 0px 0px 6px rgb(115, 187, 218);
+            }
+            .submit {
+                border: none;
+                border-radius: 4px;
+                background: rgb(255, 221, 0);
+                height: 30px;
+                margin: 10px 0px;
+            }
+            .help{
+                font-size: 14px;
+                font-weight: 200;
+            }
+            .or{
+                align-self: center;
+                margin: 10px 0px;
+            }
+            .get-otp{
+                border: 1px solid rgb(92, 89, 89);
+                border-radius: 4px;
+                height: 30px;
+                margin: 10px 0px;
+            }
+        }
+    }
+    .signup{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(166, 157, 157);
+
+        .logo{
+         overflow: hidden;
+         height: 50px;
+         width: 115px;
+         background-image: url('../images/ama.png');
+         background-position-y: -38px;
+         
+        }
+        .container{
+            border: 1px solid rgb(167, 174, 174);
+            border-radius: 14px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 20px;
+            padding-top: 10px;
+            width: 100%;
+
+            .sign-up{
+                font-size: 30px;
+                font-weight: 300;
+            }
+            label{
+                color: rgb(63, 60, 60);
+                font-size: 14px;
+            }
+            input{
+                border: 1px solid rgb(118, 120, 120);
+                border-radius: 2px;
+                margin: 10px 0px;
+                height: 24px;
+            }
+            input:focus{
+                outline: none;
+                box-shadow: 0px 0px 6px rgb(115, 189, 221);
+            }
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            margin: 0;
             }
             .password{
                 font-size: 14px;
