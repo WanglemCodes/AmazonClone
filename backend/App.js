@@ -85,10 +85,12 @@ app.post('/authuser', (req, res) => {
    })
 })
 
-app.get("/user", (req, res) => {
-   const pw = req.body.password;
+app.post("/username", (req, res) => {
+   const pw = req.body.credential;
    console.log(pw)
+   const q = "SELECT * from user_info WHERE phone = ?"
 })
+
 
 
 app.get("/wanglem", (req, res) => {

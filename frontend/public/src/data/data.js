@@ -21,7 +21,7 @@ export const fetchUser = async (userId) => {
 }
 
 export const authUser = async (credential) => {
-   console.log(credential);
+   console.log(credential + "For phone");
    try{
       const res = await fetch(`http://localhost:8000/authuser/`, {
          method: 'post',
@@ -43,11 +43,12 @@ export const authUser = async (credential) => {
 }
 
 export const getUser = async (credential) => {
+   console.log("here");
    try{
-      const res = await fetch(`http://localhost:8800/user`, {
+      const res = await fetch(`http://localhost:8000/username`, {
          method: 'post',
          headers: {
-            'constent-type': 'application/json'
+            'Content-Type': 'application/json'
          },
          body: JSON.stringify({
             credential
@@ -59,7 +60,7 @@ export const getUser = async (credential) => {
       }
       return res.json();
    }catch(err){
-      return err;
+      return {error: true, message: err.message};
    }
 }
 
